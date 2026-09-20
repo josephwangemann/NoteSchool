@@ -1,18 +1,18 @@
-import { Icon, Label, NativeTabs } from "expo-router/unstable-native-tabs";
+import { NativeTabs } from "expo-router/unstable-native-tabs";
 const TabLayout = () => {
   return (
     <NativeTabs>
       <NativeTabs.Trigger name="index">
-        <Icon sf="square.grid.2x2" />
-        <Label>Chords</Label>
+        <NativeTabs.Trigger.Icon sf="square.grid.2x2" />
+        <NativeTabs.Trigger.Label>Chords</NativeTabs.Trigger.Label>
       </NativeTabs.Trigger>
       <NativeTabs.Trigger name="notes">
-        <Icon sf="music.note" />
-        <Label>Notes</Label>
+        <NativeTabs.Trigger.Icon sf="music.note" />
+        <NativeTabs.Trigger.Label>Notes</NativeTabs.Trigger.Label>
       </NativeTabs.Trigger>
       <NativeTabs.Trigger name="pitches">
-        <Icon sf="tuningfork" />
-        <Label>Pitches</Label>
+        <NativeTabs.Trigger.Icon sf="tuningfork" />
+        <NativeTabs.Trigger.Label>Pitches</NativeTabs.Trigger.Label>
       </NativeTabs.Trigger>
     </NativeTabs>
   );

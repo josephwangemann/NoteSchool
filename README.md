@@ -10,10 +10,12 @@ A minimalist music theory reference tool
 
 ## Quick Start
 
+Use Node.js 22.13 or newer.
+
 ```bash
-bun install
-bun run ios
-bun run android
+npm install
+npm run ios
+npm run android
 ```
 
 ## Tech Stack

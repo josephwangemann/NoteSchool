@@ -7,7 +7,6 @@
     "icon": "./assets/images/icon.png",
     "scheme": "noteschool",
     "userInterfaceStyle": "dark",
-    "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.chordscalereference.app"
@@ -17,11 +16,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#0a0f1d"
       },
-      "edgeToEdgeEnabled": true,
       "package": "com.chordscalereference.app"
-    },
-    "androidNavigationBar": {
-      "enforceContrast": false
     },
     "web": {
       "bundler": "metro",
@@ -39,15 +34,25 @@
           "backgroundColor": "#0a0f1d"
         }
       ],
-      ["expo-web-browser"],
+      [
+        "expo-web-browser"
+      ],
       [
         "expo-build-properties",
         {
           "android": {
             "minSdkVersion": 33
+          },
+          "ios": {
+            "deploymentTarget": "16.4"
           }
         }
-      ]
+      ],
+      "expo-font",
+      "expo-image",
+      "expo-status-bar",
+      "expo-audio",
+      "expo-asset"
     ],
     "experiments": {
       "typedRoutes": true

@@ -1,4 +1,4 @@
-import { Audio, InterruptionModeAndroid, InterruptionModeIOS } from "expo-av";
+import { createAudioPlayer, setAudioModeAsync, type AudioPlayer } from "expo-audio";
 import { useCallback, useEffect, useRef } from "react";
 import { Platform, StyleSheet, Text, TouchableOpacity, useWindowDimensions, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -10,7 +10,7 @@ type KeyOption = (typeof keyOptions)[number];
 type PitchItem = { value: KeyOption["value"]; label: KeyOption["label"]; audioFile: number };
 
 const PitchesScreen = () => {
-  const soundRef = useRef<Audio.Sound | null>(null);
+  const playerRef = useRef<AudioPlayer | null>(null);
   const insets = useSafeAreaInsets();
   const { height: windowHeight } = useWindowDimensions();
   const tabBarHeight = Platform.OS === 'ios' ? 49 : 56;
@@ -21,12 +21,10 @@ const PitchesScreen = () => {
   });
 
   useEffect(() => {
-    Audio.setAudioModeAsync({
-      allowsRecordingIOS: false,
-      playsInSilentModeIOS: true,
-      shouldDuckAndroid: true,
-      interruptionModeAndroid: InterruptionModeAndroid.DuckOthers,
-      interruptionModeIOS: InterruptionModeIOS.DuckOthers,
+    setAudioModeAsync({
+      allowsRecording: false,
+      playsInSilentMode: true,
+      interruptionMode: "duckOthers",
     }).catch((error) => {
       console.error('Error setting audio mode:', error);
     });
@@ -34,22 +32,18 @@ const PitchesScreen = () => {
 
   useEffect(() => {
     return () => {
-      soundRef.current?.setOnPlaybackStatusUpdate(null);
-      soundRef.current?.unloadAsync().catch(() => {});
-      soundRef.current = null;
+      playerRef.current?.remove();
+      playerRef.current = null;
     };
   }, []);
 
   const playNote = useCallback(async (audioFile: number) => {
     try {
-      if (soundRef.current) {
-        soundRef.current.setOnPlaybackStatusUpdate(null);
-        await soundRef.current.unloadAsync();
-        soundRef.current = null;
+      if (!playerRef.current) {
+        playerRef.current = createAudioPlayer(null);
       }
-      const { sound } = await Audio.Sound.createAsync(audioFile, { shouldPlay: true });
-      sound.setOnPlaybackStatusUpdate(() => {});
-      soundRef.current = sound;
+      playerRef.current.replace(audioFile);
+      playerRef.current.play();
     } catch (error) {
       console.error('Error playing note:', error);
     }
@@ -130,4 +124,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default PitchesScreen; 
+export default PitchesScreen;

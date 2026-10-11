@@ -1,7 +1,7 @@
 PODS:
-  - EXConstants (57.0.19):
+  - EXConstants (57.0.21):
     - ExpoModulesCore
-  - Expo (57.0.24):
+  - Expo (57.0.27):
     - ExpoModulesCore
     - ExpoModulesJSI
     - hermes-engine
@@ -27,7 +27,7 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
-  - ExpoAsset (57.0.18):
+  - ExpoAsset (57.0.19):
     - ExpoModulesCore
   - ExpoAudio (57.0.5):
     - ExpoModulesCore
@@ -39,7 +39,7 @@ PODS:
     - ExpoModulesCore
   - ExpoFont (57.0.4):
     - ExpoModulesCore
-  - ExpoGlassEffect (57.0.3):
+  - ExpoGlassEffect (57.0.4):
     - ExpoModulesCore
   - ExpoHaptics (57.0.3):
     - ExpoModulesCore
@@ -52,11 +52,11 @@ PODS:
     - SDWebImageWebPCoder (~> 0.14.6)
   - ExpoKeepAwake (57.0.2):
     - ExpoModulesCore
-  - ExpoLinking (57.0.10):
+  - ExpoLinking (57.0.12):
     - ExpoModulesCore
   - ExpoLogBox (57.0.4):
     - React-Core
-  - ExpoModulesCore (57.0.18):
+  - ExpoModulesCore (57.0.21):
     - ExpoModulesJSI
     - hermes-engine
     - RCTRequired
@@ -80,18 +80,18 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
-  - ExpoModulesJSI (57.1.0):
+  - ExpoModulesJSI (57.1.1):
     - React-Core
     - ReactCommon
-  - ExpoModulesWorklets (57.0.18):
+  - ExpoModulesWorklets (57.0.21):
     - ExpoModulesCore
     - ExpoModulesJSI
-  - ExpoModulesWorkletsAdapter (57.0.18):
+  - ExpoModulesWorkletsAdapter (57.0.21):
     - ExpoModulesCore
     - ExpoModulesJSI
     - ExpoModulesWorklets
     - RNWorklets
-  - ExpoRouter (57.0.22):
+  - ExpoRouter (57.0.25):
     - ExpoModulesCore
     - RNScreens
   - ExpoSplashScreen (57.0.9):
@@ -100,7 +100,7 @@ PODS:
     - ExpoModulesCore
   - ExpoSystemUI (57.0.4):
     - ExpoModulesCore
-  - ExpoUI (57.0.19):
+  - ExpoUI (57.0.22):
     - ExpoModulesCore
     - ExpoModulesWorklets
     - React-RCTFabric
@@ -2750,29 +2750,29 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  EXConstants: 9ae13e3b5d0f222a979eed6d14197339739b123d
-  Expo: 3ef54c5a66491a5bc830871f73ea9d9d875faf73
-  ExpoAsset: b210270fcd528dc6b219c1ba63093bf9e9f4b1e9
+  EXConstants: 701b9564e7b427dbe39cd3a78b0906c7d430b9c4
+  Expo: 9e1eb0819630c9b4722e0ab715ad64bda48a1b35
+  ExpoAsset: dde4ad9096a841b00e4e284c98fd70ed9fb6b4dc
   ExpoAudio: 3a6e582c3d376c2178933bce9226e3c081eb705b
   ExpoBlur: dbe1508ab11794f127c215b5796115753b1c04e0
   ExpoDomWebView: fa9c72fe29dd4649197a7ecb07ddd870d55c4eda
   ExpoFileSystem: 980be7ecc921f6ba73cdf986ff66e1ecd57b8ef7
   ExpoFont: baf9e5d472c5dd59ca6b3221677f726499452a0e
-  ExpoGlassEffect: 2428f4369136505557465cefab521c2bc870c7f8
+  ExpoGlassEffect: 452d3b8408009c545b43319fb048f7f8e1f0e1ab
   ExpoHaptics: 4f26ec5ebb4cc9c5907987672ef63de77ae9df60
   ExpoImage: b53ed6e35a59401a81352b66b79662c7c2b6c23b
   ExpoKeepAwake: b9ebf2ba14c42a2b5782adab42a2168a689bfd07
-  ExpoLinking: 083db2adf29a0989973a7996c290469bcdbe5138
+  ExpoLinking: 3ac84c5caee2ce8a3a0296e1b219c2bd43c1bc60
   ExpoLogBox: c5a2405d8f6bfbb52c2ef3336b511825479a2a43
-  ExpoModulesCore: b111ddae37ba53bbb19e523a96068807e31d1c67
-  ExpoModulesJSI: 908be0b48342e85a3acedc22fa0d97611635e54b
-  ExpoModulesWorklets: 37830cb23e90c87218523f942c3e10eaac9c9322
-  ExpoModulesWorkletsAdapter: 2d00338dc6c2a9ccceacc48362d389b21af96e2f
-  ExpoRouter: 7eb554499c42f897ee223ee5fff5e3b5c141492c
+  ExpoModulesCore: 6b12504ef306736d2bf4c64d9cbe51aa37db2206
+  ExpoModulesJSI: c8a0721792af1448ddee9adb3e9321bd44044e2a
+  ExpoModulesWorklets: e2164ac09469aaf3d44dd3927649acc833ac7349
+  ExpoModulesWorkletsAdapter: c3c3d664c00c6f4e8fad10c4138bc790ce8a1da1
+  ExpoRouter: 8655a02dc3a691942801aecb9ac2886dbfd55218
   ExpoSplashScreen: 414f03c750fd71772a44e4e22bcdad58dbb5b1b8
   ExpoSymbols: 803dd72145830a3a437339e5a7a2e4b9d0c4332a
   ExpoSystemUI: 19fb0b6ed8a94d32bc15294161b5245083304e90
-  ExpoUI: 69fe73925f4dc558a9b783747684c2aae308a665
+  ExpoUI: 4703e6674223614343b11e1bad55c19942068e33
   ExpoWebBrowser: 15f1d2ab6f778156eec1eadd4430f1bf66100b9d
   FBLazyVector: 2138c6c2ab66c31bf5754dc18097fbc498a49c7f
   hermes-engine: 63c5db7d529c36335fada6582fd293ae2a105d77

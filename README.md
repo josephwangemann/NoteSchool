@@ -4,13 +4,11 @@ A minimalist music theory reference tool
 
 ## Features
 
-- Scale & Chord charts for Key
+- Scale & Chord charts
 - Random note generator for memorizing notes on the fretboard
 - Pitch reference for tuning
 
 ## Quick Start
-
-Use Node.js 22.13 or newer.
 
 ```bash
 npm install
@@ -23,7 +21,3 @@ npm run android
 - React Native
 - Expo
 - TypeScript
-
-## Contributing
-
-Open source and welcoming contributions. Feel free to propose features, open issues or PRs, etc.
